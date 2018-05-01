@@ -1,0 +1,464 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\http-agent">
+      <UniqueIdentifier>{7b5e04ab-b572-4c80-b178-d45428651ded}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\smart_ptr">
+      <UniqueIdentifier>{5ec9c7d6-201b-42bb-a969-038de00e085c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\smart_ptr\detail">
+      <UniqueIdentifier>{5be920ab-1e7c-4f08-8e34-74b671632031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="rapidjson">
+      <UniqueIdentifier>{50f4c8bf-3c31-4362-bbf7-4b76262d3079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rapidjson\internal">
+      <UniqueIdentifier>{e4fb7f13-cfcf-464f-9697-e3f172377faa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\sofa\pbrpc\binary_rpc_request.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\binary_rpc_request_parser.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\block_wrappers.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\boost_system_error_code.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\buffer.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\builtin_service_impl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\common.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\common_internal.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\compressed_stream.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\dynamic_rpc_channel_impl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\gzip_stream.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\http_rpc_request.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\http_rpc_request_parser.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\io_service_pool.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\lz4.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\mock_test_helper.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\pbjson.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\profiling.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_channel.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_client.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_client_impl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_controller.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_endpoint.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_error_code.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_request.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_request_parser.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_server.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\rpc_server_impl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\simple_rpc_channel_impl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\string_utils.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\tcmalloc_extension_helper.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\thread_group.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\timeout_manager.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\timeout_manager_impl.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\web_service.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\http-agent\http_agent.cc">
+      <Filter>Source Files\http-agent</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sofa\pbrpc\http-agent\sofa_pbrpc_client.cc">
+      <Filter>Source Files\http-agent</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\sofa\pbrpc\http-agent\http_agent.h">
+      <Filter>Source Files\http-agent</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\ascii.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\atomic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\bin2ascii.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\binary_rpc_request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\binary_rpc_request_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\block_wrappers.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\buf_handle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\buffer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\builtin_service_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\closure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\closure_helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\common_internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\compressed_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\condition_variable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\counter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\dynamic_rpc_channel_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\ext_closure.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\fast_lock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\flow_controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\func_tracer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\gzip_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\http.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\http_rpc_request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\http_rpc_request_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\io_service.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\io_service_pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\locks.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\lz4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\mock_test_helper.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\mock_test_helper_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\murmurhash.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\mutex_lock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\pbjson.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\pbrpc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\pprof_perl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\profiling.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\profiling_linker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\ptime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_byte_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_channel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_channel_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_client.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_client_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_client_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_controller_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_endpoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_error_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_listener.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_message_header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_message_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_request.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_request_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_server_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_server_message_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_server_stream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rpc_timeout_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\rw_lock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\scoped_locker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\service_pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\simple_rpc_channel_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\spin_lock.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\string_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\thread_group.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\thread_group_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\timeout_manager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\timeout_manager_impl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\timer_worker.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\tran_buf_pool.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\viz_min_js.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\wait_event.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sofa\pbrpc\web_service.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\document.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\filestream.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\prettywriter.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\rapidjson.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\reader.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\stringbuffer.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\writer.h">
+      <Filter>rapidjson</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\internal\pow10.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\internal\stack.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="src\rapidjson\internal\strfunc.h">
+      <Filter>rapidjson\internal</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\bad_weak_ptr.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\checked_delete.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\enable_shared_from_this.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\memory_order.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\owner_less.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\scoped_array.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\scoped_ptr.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\shared_ptr.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\smart_ptr.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\weak_ptr.hpp">
+      <Filter>Source Files\smart_ptr</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\operator_bool.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\shared_count.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_convertible.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_counted_base.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_counted_base_gcc_x86.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_counted_base_w32.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_counted_impl.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\spinlock.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\spinlock_pool.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\spinlock_pt.hpp">
+      <Filter>Source Files\smart_ptr\detail</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{E13D4BAD-4873-4FE4-AB49-6D9EDD736A3F}</ProjectGuid>
+    <RootNamespace>sofapbrpc</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\src;C:\boost_1_53_0;..\pthread;..\protobuf-2.4.1\src;..\;..\zlib-1.2.8\src;..\snappy;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;HAVE_WINDOWS_H;__i386__;_WIN32_WINNT=0x0501;BOOST_WINDOWS;WIN32_LEAN_AND_MEAN;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4244</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalDependencies>$(OutDir)libprotoc.lib;$(OutDir)libprotobuf.lib;$(OutDir)snappy.lib;$(OutDir)zlib.lib;$(OutDir)pthreadVC2.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\src;..\boost_1_53_0;..\pthread;..\protobuf-2.4.1\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;HAVE_WINDOWS_H;__i386__;LIBPROTOBUF_EXPORTS;PROTOBUF_USE_DLLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\sofa\pbrpc\binary_rpc_request.cc" />
+    <ClCompile Include="src\sofa\pbrpc\binary_rpc_request_parser.cc" />
+    <ClCompile Include="src\sofa\pbrpc\block_wrappers.cc" />
+    <ClCompile Include="src\sofa\pbrpc\boost_system_error_code.cc" />
+    <ClCompile Include="src\sofa\pbrpc\buffer.cc" />
+    <ClCompile Include="src\sofa\pbrpc\builtin_service_impl.cc" />
+    <ClCompile Include="src\sofa\pbrpc\common.cc" />
+    <ClCompile Include="src\sofa\pbrpc\common_internal.cc" />
+    <ClCompile Include="src\sofa\pbrpc\compressed_stream.cc" />
+    <ClCompile Include="src\sofa\pbrpc\dynamic_rpc_channel_impl.cc" />
+    <ClCompile Include="src\sofa\pbrpc\gzip_stream.cc" />
+    <ClCompile Include="src\sofa\pbrpc\http-agent\http_agent.cc" />
+    <ClCompile Include="src\sofa\pbrpc\http-agent\sofa_pbrpc_client.cc" />
+    <ClCompile Include="src\sofa\pbrpc\http_rpc_request.cc" />
+    <ClCompile Include="src\sofa\pbrpc\http_rpc_request_parser.cc" />
+    <ClCompile Include="src\sofa\pbrpc\io_service_pool.cc" />
+    <ClCompile Include="src\sofa\pbrpc\lz4.cc" />
+    <ClCompile Include="src\sofa\pbrpc\mock_test_helper.cc" />
+    <ClCompile Include="src\sofa\pbrpc\pbjson.cc" />
+    <ClCompile Include="src\sofa\pbrpc\profiling.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_channel.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_client.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_client_impl.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_controller.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_endpoint.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_error_code.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_request.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_request_parser.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_server.cc" />
+    <ClCompile Include="src\sofa\pbrpc\rpc_server_impl.cc" />
+    <ClCompile Include="src\sofa\pbrpc\simple_rpc_channel_impl.cc" />
+    <ClCompile Include="src\sofa\pbrpc\string_utils.cc" />
+    <ClCompile Include="src\sofa\pbrpc\tcmalloc_extension_helper.cc" />
+    <ClCompile Include="src\sofa\pbrpc\thread_group.cc" />
+    <ClCompile Include="src\sofa\pbrpc\timeout_manager.cc" />
+    <ClCompile Include="src\sofa\pbrpc\timeout_manager_impl.cc" />
+    <ClCompile Include="src\sofa\pbrpc\web_service.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\rapidjson\document.h" />
+    <ClInclude Include="src\rapidjson\filestream.h" />
+    <ClInclude Include="src\rapidjson\internal\pow10.h" />
+    <ClInclude Include="src\rapidjson\internal\stack.h" />
+    <ClInclude Include="src\rapidjson\internal\strfunc.h" />
+    <ClInclude Include="src\rapidjson\prettywriter.h" />
+    <ClInclude Include="src\rapidjson\rapidjson.h" />
+    <ClInclude Include="src\rapidjson\reader.h" />
+    <ClInclude Include="src\rapidjson\stringbuffer.h" />
+    <ClInclude Include="src\rapidjson\writer.h" />
+    <ClInclude Include="src\sofa\pbrpc\ascii.h" />
+    <ClInclude Include="src\sofa\pbrpc\atomic.h" />
+    <ClInclude Include="src\sofa\pbrpc\bin2ascii.h" />
+    <ClInclude Include="src\sofa\pbrpc\binary_rpc_request.h" />
+    <ClInclude Include="src\sofa\pbrpc\binary_rpc_request_parser.h" />
+    <ClInclude Include="src\sofa\pbrpc\block_wrappers.h" />
+    <ClInclude Include="src\sofa\pbrpc\buffer.h" />
+    <ClInclude Include="src\sofa\pbrpc\buf_handle.h" />
+    <ClInclude Include="src\sofa\pbrpc\builtin_service_impl.h" />
+    <ClInclude Include="src\sofa\pbrpc\closure.h" />
+    <ClInclude Include="src\sofa\pbrpc\closure_helper.h" />
+    <ClInclude Include="src\sofa\pbrpc\common.h" />
+    <ClInclude Include="src\sofa\pbrpc\common_internal.h" />
+    <ClInclude Include="src\sofa\pbrpc\compressed_stream.h" />
+    <ClInclude Include="src\sofa\pbrpc\condition_variable.h" />
+    <ClInclude Include="src\sofa\pbrpc\counter.h" />
+    <ClInclude Include="src\sofa\pbrpc\dynamic_rpc_channel_impl.h" />
+    <ClInclude Include="src\sofa\pbrpc\ext_closure.h" />
+    <ClInclude Include="src\sofa\pbrpc\fast_lock.h" />
+    <ClInclude Include="src\sofa\pbrpc\flow_controller.h" />
+    <ClInclude Include="src\sofa\pbrpc\func_tracer.h" />
+    <ClInclude Include="src\sofa\pbrpc\gzip_stream.h" />
+    <ClInclude Include="src\sofa\pbrpc\http-agent\http_agent.h" />
+    <ClInclude Include="src\sofa\pbrpc\http.h" />
+    <ClInclude Include="src\sofa\pbrpc\http_rpc_request.h" />
+    <ClInclude Include="src\sofa\pbrpc\http_rpc_request_parser.h" />
+    <ClInclude Include="src\sofa\pbrpc\io_service.h" />
+    <ClInclude Include="src\sofa\pbrpc\io_service_pool.h" />
+    <ClInclude Include="src\sofa\pbrpc\locks.h" />
+    <ClInclude Include="src\sofa\pbrpc\lz4.h" />
+    <ClInclude Include="src\sofa\pbrpc\mock_test_helper.h" />
+    <ClInclude Include="src\sofa\pbrpc\mock_test_helper_impl.h" />
+    <ClInclude Include="src\sofa\pbrpc\murmurhash.h" />
+    <ClInclude Include="src\sofa\pbrpc\mutex_lock.h" />
+    <ClInclude Include="src\sofa\pbrpc\pbjson.h" />
+    <ClInclude Include="src\sofa\pbrpc\pbrpc.h" />
+    <ClInclude Include="src\sofa\pbrpc\pprof_perl.h" />
+    <ClInclude Include="src\sofa\pbrpc\profiling.h" />
+    <ClInclude Include="src\sofa\pbrpc\profiling_linker.h" />
+    <ClInclude Include="src\sofa\pbrpc\ptime.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_byte_stream.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_channel.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_channel_impl.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_client.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_client_impl.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_client_stream.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_controller.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_controller_impl.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_endpoint.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_error_code.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_listener.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_message_header.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_message_stream.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_request.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_request_parser.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_server.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_server_impl.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_server_message_stream.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_server_stream.h" />
+    <ClInclude Include="src\sofa\pbrpc\rpc_timeout_manager.h" />
+    <ClInclude Include="src\sofa\pbrpc\rw_lock.h" />
+    <ClInclude Include="src\sofa\pbrpc\scoped_locker.h" />
+    <ClInclude Include="src\sofa\pbrpc\service_pool.h" />
+    <ClInclude Include="src\sofa\pbrpc\simple_rpc_channel_impl.h" />
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\bad_weak_ptr.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\checked_delete.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\operator_bool.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\shared_count.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\spinlock.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\spinlock_pool.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\spinlock_pt.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_convertible.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_counted_base.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_counted_base_gcc_x86.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_counted_base_w32.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\detail\sp_counted_impl.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\enable_shared_from_this.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\memory_order.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\owner_less.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\scoped_array.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\scoped_ptr.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\shared_ptr.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\smart_ptr.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="src\sofa\pbrpc\smart_ptr\weak_ptr.hpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <ClInclude Include="src\sofa\pbrpc\spin_lock.h" />
+    <ClInclude Include="src\sofa\pbrpc\string_utils.h" />
+    <ClInclude Include="src\sofa\pbrpc\thread_group.h" />
+    <ClInclude Include="src\sofa\pbrpc\thread_group_impl.h" />
+    <ClInclude Include="src\sofa\pbrpc\timeout_manager.h" />
+    <ClInclude Include="src\sofa\pbrpc\timeout_manager_impl.h" />
+    <ClInclude Include="src\sofa\pbrpc\timer_worker.h" />
+    <ClInclude Include="src\sofa\pbrpc\tran_buf_pool.h" />
+    <ClInclude Include="src\sofa\pbrpc\viz_min_js.h" />
+    <ClInclude Include="src\sofa\pbrpc\wait_event.h" />
+    <ClInclude Include="src\sofa\pbrpc\web_service.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
