@@ -1,0 +1,167 @@
+///////////////// ///////////////// ///////////////// 
+
+		只能静态编译，动态编译不过去
+
+
+///////////////// 
+补齐缺失文件rpc_option.pb.h、rpc_option.pb.cc。
+注意这两个文件根据rpc_meta.proto的生成的。
+
+
+补齐缺失文件builtin_service.pb.h、builtin_service.pb.cc。
+注意这两个文件根据builtin_service.proto的生成的。
+
+
+补齐缺失文件rpc_meta.pb.h、rpc_meta.pb.cc。
+注意这两个文件根据rpc_meta.proto的生成的。
+
+
+///////////////// 去除smart_ptr文件夹的所有头文件依赖，使用boost替换。
+
+// zy
+//#include <sofa/pbrpc/smart_ptr/checked_delete.hpp>
+//#include <sofa/pbrpc/smart_ptr/bad_weak_ptr.hpp>
+//#include <sofa/pbrpc/smart_ptr/detail/sp_counted_base.hpp>
+//#include <sofa/pbrpc/smart_ptr/detail/sp_counted_impl.hpp>
+
+#include <boost/checked_delete.hpp>
+#include <boost/smart_ptr/bad_weak_ptr.hpp>
+#include <boost/smart_ptr/detail/sp_counted_base.hpp>
+#include <boost/smart_ptr/detail/sp_counted_impl.hpp>
+
+
+sofa::pbrpc::bad_weak_ptr();
+替换
+boost::bad_weak_ptr();
+
+// zy
+//#include <sofa/pbrpc/smart_ptr/detail/shared_count.hpp>
+//#include <sofa/pbrpc/smart_ptr/shared_ptr.hpp>
+#include <boost/smart_ptr/detail/shared_count.hpp>
+#include <boost/smart_ptr/shared_ptr.hpp>
+
+
+#include <boost/smart_ptr/scoped_ptr.hpp>
+
+
+//zy
+//#include <sofa/pbrpc/smart_ptr/enable_shared_from_this.hpp>
+#include <boost/smart_ptr/enable_shared_from_this.hpp>
+
+// zy
+//#include <sofa/pbrpc/smart_ptr/scoped_array.hpp>
+#include <boost/smart_ptr/scoped_array.hpp>
+
+boost::shared_ptr
+替换
+sofa::pbrpc::shared_ptr
+
+boost::weak_ptr
+替换
+sofa::pbrpc::weak_ptr
+
+boost::enable_shared_from_this<
+替换
+sofa::pbrpc::enable_shared_from_this<
+
+boost::dynamic_pointer_cast<
+替换
+sofa::pbrpc::dynamic_pointer_cast<
+
+
+boost::detail::shared_ptr<
+替换
+boost::shared_ptr<
+
+boost::scoped_ptr<
+替换
+sofa::pbrpc::scoped_ptr<
+
+///////////////// 替换std::min，std::max
+
+#ifndef max
+#define max(a,b)            (((a) > (b)) ? (a) : (b))
+#endif
+
+#ifndef min
+#define min(a,b)            (((a) < (b)) ? (a) : (b))
+#endif
+
+
+/////////////////
+
+
+boost::scoped_array<
+替换
+sofa::pbrpc::scoped_array<
+
+
+
+boost::enable_shared_from_this<SimpleRpcChannelImpl> channel;
+        volatile bool is_builtin_service_inited; // if the builtin service is already inited.
+        LockType builtin_service_init_lock;
+		boost::enable_shared_from_this<builtin::BuiltinService_Stub> builtin_service;
+
+替换
+        boost::shared_ptr<SimpleRpcChannelImpl> channel;
+        volatile bool is_builtin_service_inited; // if the builtin service is already inited.
+        LockType builtin_service_init_lock;
+        boost::scoped_ptr<builtin::BuiltinService_Stub> builtin_service;
+
+
+
+///////////////// 复制到VS的Include目录下
+
+unistd.h
+/** This file is part of the Mingw32 package.
+*  unistd.h maps     (roughly) to io.h
+*/
+#ifndef _UNISTD_H
+#define _UNISTD_H
+#include <io.h>
+#include <process.h>
+#endif /* _UNISTD_H */
+
+
+/////////////////
+sh命令 屏蔽
+
+sofa\pbrpc\pprof_perl.h
+static const std::string pprof_perl = 
+    "#! /usr/bin/env perl\n"
+
+sofa\pbrpc\viz_min_js.h
+static const std::string viz_min_js = 
+
+///////////////// 获取本地时间修改
+
+src\sofa\pbrpc\rpc_server_impl.cc
+_start_time(ptime_now())
+
+修改ptime_now的获取算法，直接使用boost。
+
+///////////////// 原子操作替换为boost库
+
+sofa-pbrpc\src\sofa\pbrpc\atomic.h
+
+
+///////////////// 获取单前路径
+ std::string path = Readlink("/proc/self/exe");
+
+
+/////////////////   不支持态profiler功能
+// 百度 gperftools-httpd
+
+static const std::string pprof_perl = 
+
+static const std::string CPU_PROFILING_PATH = "/rpc_profiling/cpu/";
+
+static const std::string MEMORY_PROFILING_PATH = "/rpc_profiling/memory/";
+
+
+
+
+/////////////////   屏蔽
+sofa\pbrpc1\viz_min_js.h 
+
+
