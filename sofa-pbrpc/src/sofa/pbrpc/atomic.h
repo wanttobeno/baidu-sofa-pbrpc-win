@@ -48,7 +48,14 @@ template <typename T>
 inline T atomic_add_ret_old64(volatile T* n, T v)
 {
 #ifdef _WIN32
-	return BOOST_ATOMIC_INTERLOCKED_EXCHANGE_ADD(n,v);
+	volatile T expected = *n;
+	for(;;)
+	{	
+		T original =_InterlockedCompareExchange64((volatile __int64 *)n,expected+v,expected);
+		if (original == expected)
+			return expected;
+		expected = original;
+	}
 #else
     return BOOST_ATOMIC_INTERLOCKED_EXCHANGE_ADD64(n,v);
 #endif
@@ -57,7 +64,8 @@ template <typename T>
 inline T atomic_inc_ret_old64(volatile T* n)
 {
 #ifdef _WIN32
-	return BOOST_ATOMIC_INTERLOCKED_EXCHANGE_ADD(n,1);
+	T add  = 1;
+	return atomic_add_ret_old64(n,add);
 #else
 	return BOOST_ATOMIC_INTERLOCKED_EXCHANGE_ADD64(n,1);
 #endif
@@ -66,7 +74,8 @@ template <typename T>
 inline T atomic_dec_ret_old64(volatile T* n)
 {
 #ifdef _WIN32
-	return BOOST_ATOMIC_INTERLOCKED_EXCHANGE_ADD(n,-1);
+	T add  = -1;
+	return atomic_add_ret_old64(n,add);
 #else
 	return BOOST_ATOMIC_INTERLOCKED_EXCHANGE_ADD64(n,-1);
 #endif
